@@ -12,24 +12,20 @@ h1 {
 h2 {
     text-align: center;
 }
-h3 {
-    text-align: center;
-}
 
-#arrow{
-	font-size: 22px;
-}
+
 .button-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center;
     margin-top: 20px;
 }
 
-button {
+/* Dropdown button */
+.dropbtn {
     padding: 10px 20px;
     margin: 10px;
-    font-size: 16px;
+    font-size: 22px;
     background-color: #555;
     color: #fff;
     border: none;
@@ -37,16 +33,35 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
     background-color: #777;
 }
 
-/* Media Queries for responsiveness */
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-/* For screens smaller than 768px (tablets and phones) */
-@media (max-width: 767px) {
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Change the background color of the dropdown button when dropdown is active */
+.dropdown:hover .dropbtn {
+    background-color: #777;
 }
